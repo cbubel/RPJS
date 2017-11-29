@@ -1,5 +1,5 @@
 html {
-    font-family: arial;
+    font-family: monospace;
 }
 
 html, body, #container {
@@ -19,7 +19,9 @@ html, body, #container {
 
 #output {
     flex: 1;
+    padding-bottom: 0;
     background-color: #DDD;
+    overflow-y: scroll;
 }
 
 #input {
@@ -27,15 +29,27 @@ html, body, #container {
 }
 
 .output-msg {
-    border-bottom: 1px solid #CCC;
-    padding: 5px 0;
+    margin: 0.5em 0;
+    line-height: 1.3em;
+    overflow-x: hidden;
 }
 
 .output-msg:first-child {
-    padding-top: 0;
+    margin-top: 0;
 }
 
 .output-msg:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+    margin-bottom: 1em;
+}
+
+.output-msg-player::before {
+    content: "> ";
+}
+
+.output-msg-player {
+    color: #777;
+}
+
+.output-msg-game {
+    color: #333;
 }

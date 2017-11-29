@@ -4,10 +4,18 @@ import './styles/main.css';
 // Members
 const INPUT = document.getElementById('input') as HTMLInputElement;
 const OUTPUT = document.getElementById('output');
+const DEFAULT_OUTPUT = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, error impedit commodi incidunt ut dolorem explicabo modi iste, accusamus eos eveniet, quos dolorum ullam laboriosam vitae obcaecati odio corporis est!';
 
 // Functions
 function handleInput(value: string): void {
     OUTPUT.appendChild(newOutput(value, 'output-msg', 'output-msg-player'));
+    OUTPUT.appendChild(newOutput(DEFAULT_OUTPUT, 'output-msg', 'output-msg-game'));
+
+    scrollToBottom();
+}
+
+function scrollToBottom(): void {
+    OUTPUT.scrollTo(0, OUTPUT.scrollHeight);
 }
 
 function newOutput(value: string, ...classes: string[]): HTMLElement {
