@@ -1,0 +1,23 @@
+html, body, #game-container {
+    height: 100%;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#game-output, #game-input {
+    width: 100%;
+    padding: 1em 2em;
+    box-sizing: border-box;
+}
+
+#game-output {
+    flex: 1;
+    background-color: #DDD;
+}
+
+#game-input {
+    border: none;
+}
