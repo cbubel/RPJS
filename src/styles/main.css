@@ -1,5 +1,6 @@
-html {
+html, input {
     font-family: monospace;
+    font-size: 16px;
 }
 
 html, body, #container {
